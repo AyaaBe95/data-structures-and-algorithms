@@ -13,11 +13,12 @@ Write a function named raisedToTheThird that takes in an array of numbers and re
 const raisedToTheThird = (arr) => {
   // Solution code here...
   let arr2 = [];
-  for (var i = 0, len = arr.length; i < len; i++) {
-    root = Math.pow(arr[i] , 3);
-    arr2.push(root);
-}
-return arr2;
+  arr.forEach(val => {
+    arr2.push(Math.pow(val,3))
+    
+  });
+  return arr2;
+ 
 }
 
 /* ------------------------------------------------------------------------------------------------
