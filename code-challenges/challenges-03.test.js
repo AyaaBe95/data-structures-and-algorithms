@@ -23,10 +23,9 @@ function lower(str) {
 
 const updateAnimal = (arr, callback) => {
   // Solution code here...
-  let newArr=[];
-  arr.forEach(val => {
-    newArr[val]=callback(value)
-    
+  let newArr = [];
+  arr.forEach(value => {
+    newArr.push(callback(value));
   });
   return newArr;
 };
@@ -70,21 +69,8 @@ HINT: Beware... JS default is "Lexical" ordering.
 
 const sortNumbers = (arr) => {
   // Solution code here...
-  newArr =[];
-  newArr = arr.sort(function (a,b) {
-    if (a > b){
-      return 1
-    }
-    else if (a < b){
-      return -1
-    }
-    else {
-      return 0
-    }
+  return arr.sort((a, b) => a - b);
 
-    
-  })
-  return newArr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -161,22 +147,9 @@ Here is an example of the input:
 
 const sortByPrice = (arr) => {
   // Solution code here...
-  let newArr = [];
 
-  newArr = arr.sort(function(a,b){
-    if (a.price < b.price){
-      return 1
-    }
-    else if (a.price > b,price){
-      return -1
-    }
-    else {
-      return 0
-    }
+  return arr.sort((a, b) => a.price - b.price);
 
-
-  })
-  return newArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
